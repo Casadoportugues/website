@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa do Português · European Portuguese lessons with Elsa</title>
+<meta name="description" content="Tailor-made European Portuguese language training with Elsa Patrício de Barros, private or in small groups, online or in the Eindhoven region. Explanations in Dutch, English or French.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Casa do Português">
+<meta property="og:title" content="Learn European Portuguese with Elsa">
+<meta property="og:description" content="Tailor-made European Portuguese lessons, private or in small groups, online or in the Eindhoven region. Explanations in Dutch, English or French.">
+<meta property="og:url" content="https://casadoportugues.eu/">
+<meta property="og:image" content="https://casadoportugues.eu/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Casa do Português logo next to a yellow Portuguese house">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url("fonts/inter-latin-wght-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url("fonts/inter-latin-ext-wght-normal.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  :root {
+    --teal: #0999AE;
+    --deep-teal: #408981;
+    --salmon: #F0BF8E;
+    --blush: #FAECE7;
+    --mint: #ECF2EA;
+    --sky: #D9ECF5;
+    --charcoal: #1A1A1A;
+    --muted: #4A4A4A;
+    --white: #FFFFFF;
+    --max: 1040px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background: var(--white);
+  }
+  a { color: var(--deep-teal); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #eee;
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; max-width: var(--max); margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand-logo { height: 52px; width: auto; display: block; }
+  nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
+  nav a { text-decoration: none; color: var(--charcoal); font-weight: 500; font-size: 15px; }
+  nav a:hover { color: var(--teal); }
+
+  /* Buttons */
+  .btn {
+    display: inline-block; padding: 14px 24px; border-radius: 999px;
+    background: var(--salmon); color: var(--charcoal);
+    font-weight: 600; text-decoration: none; font-size: 16px;
+    border: 2px solid var(--salmon);
+  }
+  .btn:hover { background: #e8ad74; border-color: #e8ad74; }
+  .btn-outline { background: transparent; border-color: var(--charcoal); }
+  .btn-outline:hover { background: var(--charcoal); color: var(--white); border-color: var(--charcoal); }
+
+  /* Hero */
+  .hero { background: var(--mint); padding: 64px 0 56px; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+  .hero-img { width: 100%; max-width: 340px; height: auto; display: block; justify-self: center; }
+  .hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.15; margin: 0 0 18px; font-weight: 700; max-width: 16ch; }
+  .hero h1 span { color: var(--teal); }
+  .hero p.lead { font-size: 20px; color: var(--muted); max-width: 40ch; margin: 0 0 30px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  .notice { background: var(--sky); padding: 16px 0; font-size: 15px; }
+  .notice p { margin: 0; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  h2 { font-size: clamp(28px, 3.6vw, 36px); line-height: 1.2; margin: 0 0 12px; }
+  .kicker { text-transform: uppercase; letter-spacing: 0.14em; font-size: 13px; font-weight: 600; color: var(--teal); margin: 0 0 8px; }
+  .intro { color: var(--muted); max-width: 60ch; margin: 0 0 36px; }
+
+  /* Prices */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
+  .card { border: 1px solid #e4e4e4; border-radius: 16px; padding: 28px; background: var(--white); display: flex; flex-direction: column; }
+  .card.featured { border: 2px solid var(--teal); }
+  .card h3 { margin: 0 0 4px; font-size: 20px; }
+  .card .sub { color: var(--muted); font-size: 15px; margin: 0 0 18px; }
+  .price { font-size: 38px; font-weight: 700; margin: 0; line-height: 1.1; }
+  .price small { font-size: 16px; font-weight: 500; color: var(--muted); }
+  .card ul { padding-left: 20px; margin: 18px 0 0; font-size: 15px; color: var(--muted); }
+  .card ul li { margin-bottom: 6px; }
+
+  .price-note { font-size: 15px; color: var(--muted); margin: 20px 0 0; }
+  .included { background: var(--mint); border-radius: 16px; padding: 28px; margin-top: 28px; }
+  .included h3 { margin: 0 0 12px; font-size: 20px; }
+  .included ul { margin: 0; padding-left: 20px; columns: 2 260px; column-gap: 40px; }
+  .included li { margin-bottom: 8px; break-inside: avoid; }
+
+  .levels { padding-top: 0; }
+  .table-wrap { overflow-x: auto; }
+  .cefr { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
+  .cefr th { background: var(--teal); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; }
+  .cefr td { padding: 14px; border-bottom: 1px solid #e4e4e4; vertical-align: top; color: var(--muted); }
+  .cefr td:first-child { color: var(--charcoal); white-space: nowrap; }
+  .cefr td span { font-size: 13px; color: var(--muted); }
+  .cefr tbody tr:nth-child(odd) { background: var(--mint); }
+  .source { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+  /* About */
+  .about { background: var(--blush); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+  .photo {
+    aspect-ratio: 4 / 5; border-radius: 16px; background: var(--salmon);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--charcoal); font-size: 14px; text-align: center; padding: 20px;
+  }
+  .photo-img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; display: block; }
+  .about p { margin: 0 0 16px; }
+
+  /* Contact */
+  .contact-box { background: var(--teal); color: var(--white); border-radius: 20px; padding: 48px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
+  .contact-box h2 { color: var(--white); }
+  .contact-box p { color: var(--white); font-size: 18px; margin: 0 0 24px; }
+  .contact-list { list-style: none; padding: 0; margin: 0; font-size: 18px; font-weight: 500; }
+  .contact-list li { margin-bottom: 14px; }
+  .contact-list span { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--white); font-weight: 600; opacity: 0.9; }
+  .contact-list a { color: var(--white); text-decoration: none; }
+  .contact-list a:hover { text-decoration: underline; }
+
+  footer { padding: 32px 0 48px; font-size: 14px; color: var(--muted); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+  @media (max-width: 760px) {
+    nav ul { display: none; }
+    .hero { padding: 40px 0 48px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+    .hero-img { max-width: 240px; }
+    .brand-logo { height: 44px; }
+    section { padding: 56px 0; }
+    .about-grid, .contact-box { grid-template-columns: 1fr; }
+    .contact-box { padding: 32px 24px; }
+    .photo-img { max-width: 320px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="Casa do Português, home">
+      <img src="images/logo.png" alt="Casa do Português" class="brand-logo" width="120" height="52">
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#lessons">Lessons &amp; prices</a></li>
+        <li><a href="#about">About your teacher</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+      <h1>Learn <span>European Portuguese</span> with Elsa</h1>
+      <p class="lead">Tailor-made language training, private or in small groups, online or in the Eindhoven region. Explanations in Dutch, English or French.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://cal.com/casadoportugues-eu/intakes" target="_blank" rel="noopener">Book a free 30-minute intake</a>
+        <a class="btn btn-outline" href="#lessons">See lessons &amp; prices</a>
+      </div>
+      </div>
+      <img class="hero-img" src="images/house-half.jpg" alt="Illustration of a yellow Portuguese house with green shutters, a tiled roof and bougainvillea" width="505" height="805">
+    </div>
+  </div>
+
+  <div class="notice">
+    <div class="wrap">
+      <p>The Casa do Português learning platform opens in March 2027. Until then, you can book lessons with me directly on this page.</p>
+    </div>
+  </div>
+
+  <section id="lessons">
+    <div class="wrap">
+      <p class="kicker">Lessons &amp; prices</p>
+      <h2>Choose how you want to learn</h2>
+      <p class="intro">Every course starts with a free intake. We talk about your level, your goals and your schedule, and I suggest a plan.</p>
+
+      <div class="cards">
+        <div class="card featured">
+          <h3>Private course</h3>
+          <p class="sub">One-to-one, 10 hours</p>
+          <p class="price">€420 <small>/ 10 hours</small></p>
+          <ul>
+            <li>Tailor-made training around your goals</li>
+            <li>Online or in the Eindhoven region</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Small group</h3>
+          <p class="sub">2 to 4 students, 10 hours</p>
+          <p class="price">€350 <small>/ student</small></p>
+          <ul>
+            <li>Learn with a partner, friends or colleagues</li>
+            <li>Online or in the Eindhoven region</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Single lesson</h3>
+          <p class="sub">One-to-one, 1 hour</p>
+          <p class="price">€45</p>
+          <ul>
+            <li>For a specific question, a text or a conversation practice</li>
+            <li><a href="https://cal.com/casadoportugues-eu/individual-online-lesson" target="_blank" rel="noopener">Book a lesson</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Intake</h3>
+          <p class="sub">30 minutes, online</p>
+          <p class="price">Free</p>
+          <ul>
+            <li>Level check and a proposed plan</li>
+            <li><a href="https://cal.com/casadoportugues-eu/intakes" target="_blank" rel="noopener">Book your intake</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="price-note">Prices are for private individuals and are VAT-exempt (language teaching). For companies, 21% VAT is added. See the <a href="terms.html">terms</a> for booking and cancellation.</p>
+
+      <div class="included">
+        <h3>Included in every course</h3>
+        <ul>
+          <li>A personal online space with your roadmap, lesson notes and useful links</li>
+          <li>Quizlet vocabulary sets in Portuguese with Dutch, English or French</li>
+          <li>Homework between lessons to review and prepare</li>
+          <li>Grammar sheets with answer keys</li>
+          <li>A certificate of attendance at the end of the course</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="levels" class="levels">
+    <div class="wrap">
+      <p class="kicker">Levels</p>
+      <h2>How long does each level take?</h2>
+      <p class="intro">The Council of Europe gives an estimate of the study hours needed for each level of the Common European Framework (CEFR). With a 10-hour pack you learn the basics: introducing yourself, asking and understanding simple questions, and your first practical vocabulary.</p>
+      <div class="table-wrap">
+      <table class="cefr">
+        <thead><tr><th>Level</th><th>Study hours</th><th>What you can do</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A1</strong><br><span>Beginner</span></td><td>about 75</td><td>You start from zero: simple vocabulary, the present tense and the basics for daily life in Portugal.</td></tr>
+          <tr><td><strong>A2</strong><br><span>Elementary</span></td><td>180 to 200</td><td>You get by in simple conversations, using the past tense in practical situations.</td></tr>
+          <tr><td><strong>B1</strong><br><span>Intermediate</span></td><td>350 to 400</td><td>You manage daily life in Portuguese, with richer grammar and real-life texts.</td></tr>
+          <tr><td><strong>B2</strong><br><span>Upper intermediate</span></td><td>500 to 600</td><td>You express yourself with nuance, in formal and informal Portuguese.</td></tr>
+          <tr><td><strong>C1 / C2</strong><br><span>Advanced / Proficient</span></td><td>C1: 700 to 800<br>C2: 1000 to 1200</td><td>You think and write in Portuguese, including academic and professional texts.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="source">Source: <a href="https://www.coe.int/en/web/common-european-framework-reference-languages" target="_blank" rel="noopener">Council of Europe, Common European Framework of Reference for Languages</a></p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <img class="photo-img" src="images/elsa.jpg" alt="Elsa Patrício de Barros smiling on a yellow bench in front of a white church in Portugal" width="640" height="800">
+      <div>
+        <h2>About your teacher</h2>
+        <p>Olá, I'm Elsa, Portuguese teacher and translator with more than 30 years of experience, based in Veldhoven, the Netherlands.</p>
+        <p>I'm a certified teacher of European Portuguese. I was director of the Centro de Língua Portuguesa in Goa, India, and taught Portuguese at the European institutions in Brussels. Today I teach at the Volksuniversiteit Regio Eindhoven and I'm a jury member for the Dutch-Portuguese interpreter selection.</p>
+        <p>I split my time between the Netherlands and the Cadaval area, north of Lisbon. The Portuguese you learn with me is the Portuguese people speak in Portugal today.</p>
+        <p>I explain grammar in Dutch, English or French, whichever works best for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div>
+          <p class="kicker" style="color: var(--white);">Contact</p>
+          <h2>Start with a free intake</h2>
+          <p>Pick a time that suits you, or send me a message with your questions.</p>
+          <a class="btn" href="https://cal.com/casadoportugues-eu/intakes" target="_blank" rel="noopener">Book a free intake</a>
+        </div>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:elsa@casadoportugues.eu">elsa@casadoportugues.eu</a></li>
+          <li><span>Phone (Netherlands)</span><a href="tel:+31652262032">+31 (0)652 262 032</a></li>
+          <li><span>Phone (Portugal)</span><a href="tel:+351934708014">+351 934 708 014</a></li>
+          <li><span>Where</span>Online, and in the Eindhoven region</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Casa do Português · Elsa Patrício de Barros · 5504 AJ Veldhoven, the Netherlands</span>
+    <span>KvK 67044492 · Btw-id NL002504989B09 · <a href="mailto:elsa@casadoportugues.eu">elsa@casadoportugues.eu</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

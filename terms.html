@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms · Casa do Português</title>
+<meta name="description" content="Booking, prices, VAT and cancellation terms for Casa do Português lessons.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url("fonts/inter-latin-wght-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url("fonts/inter-latin-ext-wght-normal.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  :root {
+    --teal: #0999AE;
+    --deep-teal: #408981;
+    --salmon: #F0BF8E;
+    --blush: #FAECE7;
+    --mint: #ECF2EA;
+    --sky: #D9ECF5;
+    --charcoal: #1A1A1A;
+    --muted: #4A4A4A;
+    --white: #FFFFFF;
+    --max: 1040px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background: var(--white);
+  }
+  a { color: var(--deep-teal); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #eee;
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; max-width: var(--max); margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand-logo { height: 52px; width: auto; display: block; }
+  nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
+  nav a { text-decoration: none; color: var(--charcoal); font-weight: 500; font-size: 15px; }
+  nav a:hover { color: var(--teal); }
+
+  /* Buttons */
+  .btn {
+    display: inline-block; padding: 14px 24px; border-radius: 999px;
+    background: var(--salmon); color: var(--charcoal);
+    font-weight: 600; text-decoration: none; font-size: 16px;
+    border: 2px solid var(--salmon);
+  }
+  .btn:hover { background: #e8ad74; border-color: #e8ad74; }
+  .btn-outline { background: transparent; border-color: var(--charcoal); }
+  .btn-outline:hover { background: var(--charcoal); color: var(--white); border-color: var(--charcoal); }
+
+  /* Hero */
+  .hero { background: var(--mint); padding: 64px 0 56px; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+  .hero-img { width: 100%; height: auto; border-radius: 16px; display: block; }
+  .hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.15; margin: 0 0 18px; font-weight: 700; max-width: 16ch; }
+  .hero h1 span { color: var(--teal); }
+  .hero p.lead { font-size: 20px; color: var(--muted); max-width: 40ch; margin: 0 0 30px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  .notice { background: var(--sky); padding: 16px 0; font-size: 15px; }
+  .notice p { margin: 0; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  h2 { font-size: clamp(28px, 3.6vw, 36px); line-height: 1.2; margin: 0 0 12px; }
+  .kicker { text-transform: uppercase; letter-spacing: 0.14em; font-size: 13px; font-weight: 600; color: var(--teal); margin: 0 0 8px; }
+  .intro { color: var(--muted); max-width: 60ch; margin: 0 0 36px; }
+
+  /* Prices */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
+  .card { border: 1px solid #e4e4e4; border-radius: 16px; padding: 28px; background: var(--white); display: flex; flex-direction: column; }
+  .card.featured { border: 2px solid var(--teal); }
+  .card h3 { margin: 0 0 4px; font-size: 20px; }
+  .card .sub { color: var(--muted); font-size: 15px; margin: 0 0 18px; }
+  .price { font-size: 38px; font-weight: 700; margin: 0; line-height: 1.1; }
+  .price small { font-size: 16px; font-weight: 500; color: var(--muted); }
+  .card ul { padding-left: 20px; margin: 18px 0 0; font-size: 15px; color: var(--muted); }
+  .card ul li { margin-bottom: 6px; }
+
+  .price-note { font-size: 15px; color: var(--muted); margin: 20px 0 0; }
+  .included { background: var(--mint); border-radius: 16px; padding: 28px; margin-top: 28px; }
+  .included h3 { margin: 0 0 12px; font-size: 20px; }
+  .included ul { margin: 0; padding-left: 20px; columns: 2 260px; column-gap: 40px; }
+  .included li { margin-bottom: 8px; break-inside: avoid; }
+
+  /* About */
+  .about { background: var(--blush); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+  .photo {
+    aspect-ratio: 4 / 5; border-radius: 16px; background: var(--salmon);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--charcoal); font-size: 14px; text-align: center; padding: 20px;
+  }
+  .about p { margin: 0 0 16px; }
+
+  /* Contact */
+  .contact-box { background: var(--teal); color: var(--white); border-radius: 20px; padding: 48px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
+  .contact-box h2 { color: var(--white); }
+  .contact-box p { color: var(--white); font-size: 18px; margin: 0 0 24px; }
+  .contact-list { list-style: none; padding: 0; margin: 0; font-size: 18px; font-weight: 500; }
+  .contact-list li { margin-bottom: 14px; }
+  .contact-list span { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--white); font-weight: 600; opacity: 0.9; }
+  .contact-list a { color: var(--white); text-decoration: none; }
+  .contact-list a:hover { text-decoration: underline; }
+
+  footer { padding: 32px 0 48px; font-size: 14px; color: var(--muted); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+  .legal { padding: 56px 0 24px; max-width: 720px; }
+  .legal h1 { font-size: clamp(30px,4vw,40px); margin: 0 0 8px; }
+  .legal h2 { font-size: 22px; margin: 36px 0 8px; }
+  .legal .updated { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+  .legal ul { padding-left: 22px; }
+  @media (max-width: 760px) {
+    nav ul { display: none; }
+    .hero { padding: 40px 0 48px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+    .brand-logo { height: 44px; }
+    section { padding: 56px 0; }
+    .about-grid, .contact-box { grid-template-columns: 1fr; }
+    .contact-box { padding: 32px 24px; }
+    .photo { max-width: 280px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="Casa do Português, home">
+      <img src="images/logo.png" alt="Casa do Português" class="brand-logo" width="120" height="52">
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html#lessons">Lessons &amp; prices</a></li>
+        <li><a href="index.html#about">About your teacher</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap legal">
+<h1>Terms</h1>
+<p class="updated">Last updated: 29 September 2026</p>
+<p>These terms apply to all lessons and courses booked with Casa do Português, the trade name of Elsa Patrício de Barros, Veldhoven, the Netherlands (KvK 67044492).</p>
+
+<h2>Booking</h2>
+<p>You book the free intake and single lessons through the booking links on this website. Courses (10-hour packs and small groups) are agreed by email after the intake.</p>
+
+<h2>Prices and VAT</h2>
+<ul>
+<li>Private course: €420 for 10 hours</li>
+<li>Small group (2 to 4 students): €350 per student for 10 hours</li>
+<li>Single lesson: €45</li>
+<li>Intake (30 minutes): free</li>
+</ul>
+<p>Prices for private individuals are VAT-exempt under article 11, paragraph 1, letter o of the Dutch VAT Act 1968 (BTW-vrijstelling van toepassing i.v.m. taalonderwijs). For companies, 21% VAT is added to these prices.</p>
+
+<h2>Payment</h2>
+<p>Courses are paid in full in advance, by bank transfer.</p>
+
+<h2>Cancelling a lesson</h2>
+<p>You can cancel a lesson up to 3 hours before it starts, through your personal Cal.com link. The free slot can be booked again right away through the same link. A lesson you miss without cancelling in time counts as a lesson given.</p>
+<p>If I cancel a lesson, the unused hours are refunded in full.</p>
+
+<h2>Right of withdrawal (private individuals)</h2>
+<p>If you book as a private individual, you can withdraw from your booking within 14 days after the booking or agreement, without giving a reason. Send an email to <a href="mailto:elsa@casadoportugues.eu">elsa@casadoportugues.eu</a>.</p>
+<ul>
+<li>If no lesson has taken place yet, you get the full amount back.</li>
+<li>If you asked for lessons to start within those 14 days, you pay only for the lessons already given. You get the rest back.</li>
+</ul>
+<p>I refund you within 14 days after receiving your email.</p>
+
+<h2>Ending a course after the 14 days</h2>
+<p>After the withdrawal period, the full course price is due. If your first lesson takes place after the withdrawal period, you can stop the course right after that first lesson and get 80% of the course price back. This option isn't available later in the course.</p>
+<p>The right of withdrawal does not apply to companies.</p>
+
+<h2>Results</h2>
+<p>I do my best to give you high-quality lessons. Learning a language also depends on your own effort and practice between lessons, so I can't guarantee a specific result.</p>
+
+<h2>Questions or complaints</h2>
+<p>Email <a href="mailto:elsa@casadoportugues.eu">elsa@casadoportugues.eu</a>. I reply within 5 working days.</p>
+
+<h2>Applicable law</h2>
+<p>Dutch law applies to these terms.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Casa do Português · Elsa Patrício de Barros · 5504 AJ Veldhoven, the Netherlands</span>
+    <span>KvK 67044492 · Btw-id NL002504989B09 · <a href="mailto:elsa@casadoportugues.eu">elsa@casadoportugues.eu</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
