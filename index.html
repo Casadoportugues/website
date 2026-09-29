@@ -141,6 +141,9 @@
   .contact-list span { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--white); font-weight: 600; opacity: 0.9; }
   .contact-list a { color: var(--white); text-decoration: none; }
   .contact-list a:hover { text-decoration: underline; }
+  .social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .social a { display: inline-block; padding: 8px 18px; border: 2px solid var(--white); border-radius: 999px; color: var(--white); text-decoration: none; font-weight: 600; font-size: 15px; }
+  .social a:hover { background: var(--white); color: var(--deep-teal); }
 
   footer { padding: 32px 0 48px; font-size: 14px; color: var(--muted); }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
@@ -185,6 +188,10 @@
     "addressCountry": "NL"
   },
   "areaServed": "Worldwide",
+  "sameAs": [
+    "https://www.linkedin.com/company/casadoportugues/",
+    "https://casadoportugues.substack.com/"
+  ],
   "availableLanguage": [
     "en",
     "fr",
@@ -425,10 +432,15 @@
           <h2>Start with a free intake</h2>
           <p>Pick a time that suits you, or send me a message with your questions.</p>
           <a class="btn" href="https://cal.com/casadoportugues-eu/intakes" target="_blank" rel="noopener">Book a free intake</a>
+          <div class="social">
+            <a href="https://wa.me/31652262032" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/casadoportugues/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://casadoportugues.substack.com/" target="_blank" rel="noopener">Substack</a>
+          </div>
         </div>
         <ul class="contact-list">
           <li><span>Email</span><a href="mailto:elsa@casadoportugues.eu">elsa@casadoportugues.eu</a></li>
-          <li><span>Phone (Netherlands)</span><a href="tel:+31652262032">+31 (0)652 262 032</a></li>
+          <li><span>Phone and WhatsApp (Netherlands)</span><a href="tel:+31652262032">+31 (0)652 262 032</a></li>
           <li><span>Phone (Portugal)</span><a href="tel:+351934708014">+351 934 708 014</a></li>
           <li><span>Where</span>Online, and in the Eindhoven region</li>
         </ul>
