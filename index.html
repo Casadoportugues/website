@@ -174,6 +174,41 @@
   .quote .tr { margin: 0 0 16px; font-size: 14px; font-style: italic; color: var(--muted); }
   .quote figcaption { margin-top: auto; font-size: 14px; font-weight: 600; }
   .quote figcaption span { font-weight: 400; color: var(--muted); }
+
+  /* Illustrations */
+  .illu { display: block; height: auto; max-width: 100%; }
+  .head-split { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: center; margin-bottom: 36px; }
+  .head-split .intro { margin-bottom: 0; }
+  .lessons-illu { width: 300px; border-radius: 16px; }
+  @media (min-width: 761px) {
+    #lessons .head-split { grid-template-columns: auto minmax(0, 1fr); }
+    #lessons .head-split .lessons-illu { order: -1; }
+  }
+  .levels-split { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center; margin-bottom: 36px; }
+  .levels-split .intro:last-child { margin-bottom: 0; }
+  .levels-illu { width: 320px; border-radius: 16px; }
+  .quote-illu { flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 0 20px; }
+  .quote-illu img { width: 60%; max-width: 200px; }
+  .contact-box.with-illu { grid-template-columns: 1.4fr auto 1fr; gap: 32px; }
+  .contact-illu { width: 170px; }
+  @media (max-width: 900px) {
+    .contact-box.with-illu { grid-template-columns: 1fr 1fr; }
+    .contact-illu { display: none; }
+  }
+  @media (max-width: 760px) {
+    .head-split, .levels-split { grid-template-columns: 1fr; gap: 24px; }
+    .lessons-illu, .levels-illu { width: 100%; max-width: 300px; justify-self: center; }
+    .contact-box.with-illu { grid-template-columns: 1fr; }
+    .contact-illu { display: block; width: 150px; justify-self: center; }
+  }
+  .soon { padding-top: 0; }
+  .soon-grid { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 48px; align-items: center; }
+  .soon-illu { width: 340px; }
+  .soon p.lead { color: var(--muted); max-width: 52ch; margin: 0; }
+  @media (max-width: 760px) {
+    .soon-grid { grid-template-columns: 1fr; gap: 24px; }
+    .soon-illu { width: 100%; max-width: 280px; justify-self: center; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -303,9 +338,14 @@
 
   <section id="lessons">
     <div class="wrap">
-      <p class="kicker">Lessons &amp; prices</p>
-      <h2>Choose your Portuguese lessons</h2>
-      <p class="intro">Every course starts with a free intake. We talk about your level, your goals and your schedule, and I suggest a plan.</p>
+      <div class="head-split">
+        <div>
+          <p class="kicker">Lessons &amp; prices</p>
+          <h2>Choose your Portuguese lessons</h2>
+          <p class="intro">Every course starts with a free intake. We talk about your level, your goals and your schedule, and I suggest a plan.</p>
+        </div>
+        <img class="illu lessons-illu" src="images/portuguese-lessons-prices-certificate-illustration.svg" alt="Illustration of a desk with a framed course certificate, a calendar, headphones and an open book: Portuguese lessons with Elsa" width="300" height="172" loading="lazy">
+      </div>
 
       <div class="cards">
         <div class="card featured">
@@ -381,10 +421,15 @@
     <div class="wrap">
       <p class="kicker">Levels</p>
       <h2>How long does each level of Portuguese take?</h2>
+      <div class="levels-split">
+        <div>
       <p class="intro" style="margin-bottom: 14px">The Council of Europe gives an estimate of the study hours needed for each level of the Common European Framework (CEFR). What 10 hours give you depends on where you start. For example:</p>
       <p class="intro" style="margin-bottom: 14px"><strong>Starting from zero:</strong> a 10-hour pack covers the basics. You learn to introduce yourself, ask and understand simple questions, and use your first practical vocabulary.</p>
       <p class="intro" style="margin-bottom: 14px"><strong>Already at B1 or B2:</strong> you run a business in Portugal and want to communicate with ease. A 10-hour pack gives you the confidence and the vocabulary you need, with expressions for social situations and for business.</p>
       <p class="intro">After a pack, you can go on with another 10 hours, and another, at your own pace.</p>
+        </div>
+        <img class="illu levels-illu" src="images/european-portuguese-study-hours-cefr-levels.svg" alt="Illustration of a desk with a laptop and an open book showing rising bar charts: progress through the CEFR levels in European Portuguese" width="320" height="240" loading="lazy">
+      </div>
       <div class="table-wrap">
       <table class="cefr">
         <thead><tr><th>Level</th><th>Study hours</th><th>What you can do</th></tr></thead>
@@ -438,14 +483,15 @@
           <figcaption>Astrid van O. <span>· Facebook</span></figcaption>
         </figure>
         <figure class="quote">
+          <blockquote lang="nl"><p>"Ik raad Elsa aan! Ook super lief voor kinderen!"</p></blockquote>
+          <p class="tr">I recommend Elsa! She's also wonderful with children!</p>
+          <div class="quote-illu"><img class="illu" src="images/portuguese-swallows-andorinhas-illustration.svg" alt="Two Portuguese swallows (andorinhas), a traditional symbol of home in Portugal" width="200" height="161" loading="lazy"></div>
+          <figcaption>Jessy R. <span>· Facebook</span></figcaption>
+        </figure>
+        <figure class="quote">
           <blockquote lang="nl"><p>"Elsa is zeer vakkundig en communiceert helder en op vriendelijke wijze. Daarnaast zijn haar oefeningen erg leuk en creatief. Het individueel leertraject Portugees was een prima opfrissing van de grammaticale regels en ook een uitbreiding van de woordenschat. Een aanrader!"</p></blockquote>
           <p class="tr">Elsa is highly skilled and communicates clearly and kindly. Her exercises are fun and creative. The individual Portuguese course was an excellent refresher of the grammar rules and also expanded my vocabulary. Highly recommended!</p>
           <figcaption>Tony de Sousa C. <span>· LinkedIn</span></figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote lang="nl"><p>"Ik raad Elsa aan! Ook super lief voor kinderen!"</p></blockquote>
-          <p class="tr">I recommend Elsa! She's also wonderful with children!</p>
-          <figcaption>Jessy R. <span>· Facebook</span></figcaption>
         </figure>
       </div>
     </div>
@@ -453,7 +499,7 @@
 
   <section id="contact">
     <div class="wrap">
-      <div class="contact-box">
+      <div class="contact-box with-illu">
         <div>
           <p class="kicker" style="color: var(--white);">Contact</p>
           <h2>Start with a free intake</h2>
@@ -465,12 +511,24 @@
             <a href="https://casadoportugues.substack.com/" target="_blank" rel="noopener">Substack</a>
           </div>
         </div>
+        <img class="illu contact-illu" src="images/portuguese-teacher-elsa-waving-contact-illustration.svg" alt="Illustration of Elsa, the Portuguese teacher, waving hello next to a phone" width="190" height="96" loading="lazy">
         <ul class="contact-list">
           <li><span>Email</span><a href="mailto:elsa@casadoportugues.eu">elsa@casadoportugues.eu</a></li>
           <li><span>Phone and WhatsApp (Netherlands)</span><a href="tel:+31652262032">+31 (0)652 262 032</a></li>
           <li><span>Phone (Portugal)</span><a href="tel:+351934708014">+351 934 708 014</a></li>
           <li><span>Where</span>Online, and in the Eindhoven region</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="spring-2027" class="soon">
+    <div class="wrap soon-grid">
+      <img class="illu soon-illu" src="images/casa-do-portugues-coming-spring-2027-illustration.svg" alt="Illustration of Leonor, Joaquim and Diogo, the Casa do Português characters, waving hello from a yellow bench" width="340" height="288" loading="lazy">
+      <div>
+        <p class="kicker">Spring 2027</p>
+        <h2>See you soon in our new home</h2>
+        <p class="lead">The Casa do Português is being fully renovated. Next spring, the doors open to the new online house, with its Sala de aulas, Biblioteca, Cozinha and Jardins. We can't wait to welcome you in.</p>
       </div>
     </div>
   </section>
