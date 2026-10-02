@@ -210,6 +210,13 @@
     .soon-grid { grid-template-columns: 1fr; gap: 24px; }
     .soon-illu { width: 100%; max-width: 280px; justify-self: center; }
   }
+
+  /* Free level test */
+  .level-callout { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: center; margin-top: 36px; padding: 28px; background: var(--white); border: 2px solid var(--salmon); border-radius: 16px; }
+  .level-callout img { width: 100%; height: auto; display: block; }
+  .level-callout h3 { margin: 0 0 8px; font-size: 22px; }
+  .level-callout p { margin: 0 0 16px; color: var(--muted); }
+  @media (max-width: 760px) { .level-callout { grid-template-columns: 1fr; padding: 22px; } .level-callout img { max-width: 180px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -326,6 +333,7 @@
       <div class="hero-actions">
         <a class="btn" href="https://cal.com/casadoportugues-eu/intakes" target="_blank" rel="noopener">Book a free 30-minute intake</a>
         <a class="btn btn-outline" href="#lessons">See lessons &amp; prices</a>
+        <a class="btn btn-outline" href="/teste-de-nivel/">Free level test</a>
       </div>
       </div>
       <img class="hero-img" src="images/house-half.jpg" alt="Illustration of a yellow Portuguese house with green shutters, a tiled roof and bougainvillea" width="505" height="805">
@@ -445,6 +453,14 @@
       </table>
       </div>
       <p class="source">Source: <a href="https://www.coe.int/en/web/common-european-framework-reference-languages" target="_blank" rel="noopener">Council of Europe, Common European Framework of Reference for Languages</a></p>
+      <div class="level-callout">
+        <img src="images/free-level-test-illustration.svg" alt="Illustration of an open book and an hourglass" width="198" height="149" loading="lazy">
+        <div>
+          <h3>Which level are you at?</h3>
+          <p>Take the free level test. It takes about 15 minutes and shows you where to start. It checks your reading and grammar. In the free intake, we add a conversation to check your speaking and listening.</p>
+          <a class="btn" href="/teste-de-nivel/">Take the free level test</a>
+        </div>
+      </div>
     </div>
   </section>
 
