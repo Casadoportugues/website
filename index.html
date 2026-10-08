@@ -185,6 +185,9 @@
     #lessons .head-split { grid-template-columns: auto minmax(0, 1fr); }
     #lessons .head-split .lessons-illu { order: -1; }
   }
+  .card-split { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: center; }
+  .card-split-reverse { grid-template-columns: 300px minmax(0, 1fr); }
+  .card-illu { width: 300px; border-radius: 16px; }
   .levels-split { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center; margin-bottom: 36px; }
   .levels-split .intro:last-child { margin-bottom: 0; }
   .levels-illu { width: 320px; border-radius: 16px; }
@@ -197,7 +200,8 @@
     .contact-illu { display: none; }
   }
   @media (max-width: 760px) {
-    .head-split, .levels-split { grid-template-columns: 1fr; gap: 24px; }
+    .head-split, .levels-split, .card-split, .card-split-reverse { grid-template-columns: 1fr; gap: 24px; }
+    .card-illu { width: 100%; max-width: 300px; justify-self: center; }
     .lessons-illu, .levels-illu { width: 100%; max-width: 300px; justify-self: center; }
     .contact-box.with-illu { grid-template-columns: 1fr; }
     .contact-illu { display: block; width: 150px; justify-self: center; }
@@ -412,17 +416,23 @@
         </ul>
       </div>
 
-      <div class="business" id="companies">
-        <h3>European Portuguese training for companies</h3>
-        <p>Are colleagues moving to Portugal, or does your team work with Portuguese-speaking clients? I design Portuguese courses for companies: one-to-one or in small groups, online or in-company in the Eindhoven region, with a programme and schedule set around your team's goals.</p>
-        <p><strong>Quote on request.</strong> Tell me about your team and I'll send you a tailor-made quote. Prices for companies are subject to 21% VAT.</p>
-        <a class="btn" href="mailto:elsa@casadoportugues.eu?subject=Quote%20request%3A%20Portuguese%20training%20for%20our%20company">Request a quote</a>
+      <div class="business card-split" id="companies">
+        <div>
+          <h3>European Portuguese training for companies</h3>
+          <p>Are colleagues moving to Portugal, or does your team work with Portuguese-speaking clients? I design Portuguese courses for companies: one-to-one or in small groups, online or in-company in the Eindhoven region, with a programme and schedule set around your team's goals.</p>
+          <p><strong>Quote on request.</strong> Tell me about your team and I'll send you a tailor-made quote. Prices for companies are subject to 21% VAT.</p>
+          <a class="btn" href="mailto:elsa@casadoportugues.eu?subject=Quote%20request%3A%20Portuguese%20training%20for%20our%20company">Request a quote</a>
+        </div>
+        <img class="illu card-illu" src="images/european-portuguese-training-for-companies-illustration.svg" alt="Illustration of a shelf with blue folders and a globe above a laptop, where Elsa waves from a video call: online Portuguese training for companies" width="300" height="225" loading="lazy">
       </div>
 
-      <div class="family" id="families">
-        <h3>Portuguese lessons for children and families</h3>
-        <p>Have you moved to Portugal with your family? I teach children and parents online, alongside school. For children in PLNM classes (Portuguese as a non-native language), the lessons focus on speaking and understanding, so they can follow at school and make friends more easily. Explanations in Dutch, English, French or Spanish.</p>
-        <a class="btn" href="https://cal.com/casadoportugues-eu/intakes" target="_blank" rel="noopener">Book a free intake</a>
+      <div class="family card-split card-split-reverse" id="families">
+        <img class="illu card-illu" src="images/portuguese-lessons-children-families-illustration.svg" alt="Illustration of Elsa waving from a laptop screen, with a Portuguese house, an open notebook and two swallows by the window: Portuguese lessons for children and families" width="300" height="225" loading="lazy">
+        <div>
+          <h3>Portuguese lessons for children and families</h3>
+          <p>Have you moved to Portugal with your family? I teach children and parents online, alongside school. For children in PLNM classes (Portuguese as a non-native language), the lessons focus on speaking and understanding, so they can follow at school and make friends more easily. Explanations in Dutch, English, French or Spanish.</p>
+          <a class="btn" href="https://cal.com/casadoportugues-eu/intakes" target="_blank" rel="noopener">Book a free intake</a>
+        </div>
       </div>
     </div>
   </section>
